@@ -18,6 +18,12 @@ This Mapillary Vistas Dataset is provided under the Creative Commons Attribution
 
 ## Download dataset and push it to this folder
 
+## Install dependencies
+
+  ```bash
+  pip install fastapi uvicorn ultralytics pillow jinja2
+  ```
+
 ## Process format data for suitable with require of YOLO
 - Process mapillary dataset
 
@@ -99,5 +105,13 @@ python train_script.py --model yolov9c.pt --data ./datasets/data.yaml --epochs 1
 - Ensure your `data.yaml` file is correctly configured for the dataset.
 - Adjust `epochs`, `imgsz`, and `batch` based on your system's resources and dataset size.
 - The `--use_resnet` option modifies the YOLO architecture, which might affect performance.
+
+# Demo
+
+  ```bash
+  uvicorn app:app --reload
+  ```
+
+- Open your browser and navigate to http://127.0.0.1:8000
 
 *Created by Phuc Pham Huynh - [phucph.18@grad.uit.edu.vn](mailto:phucph.18@grad.uit.edu.vn)*
